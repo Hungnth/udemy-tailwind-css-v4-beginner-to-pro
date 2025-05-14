@@ -36,6 +36,8 @@
     --default-mono-font-family: var(--font-mono);
     --font-quicksand: 'Quicksand', serif;
     --animate-wavey: wavey 1s linear infinite;
+    --animation-delay-200: 200ms;
+    --animation-delay-300: 300ms;
   }
 }
 @layer base {
@@ -516,6 +518,15 @@
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
+  }
+  .animation-delay-200 {
+    animation-delay: var(--animation-delay-200);
+  }
+  .animation-delay-300 {
+    animation-delay: var(--animation-delay-300);
+  }
+  .animation-delay-\[150ms\] {
+    animation-delay: 150ms;
   }
   .group-hover\:block {
     &:is(:where(.group):hover *) {
