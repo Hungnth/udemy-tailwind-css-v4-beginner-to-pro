@@ -14,8 +14,10 @@
     --color-pink-300: oklch(82.3% 0.12 346.018);
     --color-pink-500: oklch(65.6% 0.241 354.308);
     --color-rose-500: oklch(64.5% 0.246 16.439);
+    --color-zinc-100: oklch(96.7% 0.001 286.375);
     --color-zinc-200: oklch(92% 0.004 286.32);
     --color-zinc-500: oklch(55.2% 0.016 285.938);
+    --color-zinc-900: oklch(21% 0.006 285.885);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -444,6 +446,9 @@
       background-color: color-mix(in oklab, var(--color-white) 30%, transparent);
     }
   }
+  .bg-zinc-100 {
+    background-color: var(--color-zinc-100);
+  }
   .bg-zinc-200 {
     background-color: var(--color-zinc-200);
   }
@@ -519,6 +524,9 @@
   }
   .text-zinc-200 {
     color: var(--color-zinc-200);
+  }
+  .text-zinc-900 {
+    color: var(--color-zinc-900);
   }
   .italic {
     font-style: italic;
@@ -658,6 +666,16 @@
   .md\:min-w-\[40\%\] {
     @media (width >= 48rem) {
       min-width: 40%;
+    }
+  }
+  .dark\:bg-zinc-900 {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-zinc-900);
+    }
+  }
+  .dark\:text-zinc-200 {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-zinc-200);
     }
   }
   .group-open\:-top-2 {
