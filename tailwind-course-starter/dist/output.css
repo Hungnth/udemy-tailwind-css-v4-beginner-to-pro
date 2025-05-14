@@ -8,6 +8,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-teal-900: oklch(38.6% 0.063 188.416);
+    --color-cyan-500: oklch(71.5% 0.143 215.221);
     --color-sky-900: oklch(39.1% 0.09 240.876);
     --color-pink-100: oklch(94.8% 0.028 342.258);
     --color-pink-200: oklch(89.9% 0.061 343.231);
@@ -16,6 +18,7 @@
     --color-rose-500: oklch(64.5% 0.246 16.439);
     --color-zinc-200: oklch(92% 0.004 286.32);
     --color-zinc-500: oklch(55.2% 0.016 285.938);
+    --color-zinc-800: oklch(27.4% 0.006 286.033);
     --color-zinc-900: oklch(21% 0.006 285.885);
     --color-black: #000;
     --color-white: #fff;
@@ -244,6 +247,9 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .left-1\/2 {
+    left: calc(1/2 * 100%);
+  }
   .z-10 {
     z-index: 10;
   }
@@ -295,6 +301,9 @@
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
   }
+  .-ml-\[8px\] {
+    margin-left: calc(8px * -1);
+  }
   .ml-auto {
     margin-left: auto;
   }
@@ -331,6 +340,9 @@
   .h-80 {
     height: calc(var(--spacing) * 80);
   }
+  .h-\[250px\] {
+    height: 250px;
+  }
   .h-\[calc\(100vh-200px\)\] {
     height: calc(100vh - 200px);
   }
@@ -342,6 +354,9 @@
   }
   .w-1 {
     width: calc(var(--spacing) * 1);
+  }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
@@ -482,8 +497,15 @@
   .bg-zinc-200 {
     background-color: var(--color-zinc-200);
   }
+  .bg-zinc-800 {
+    background-color: var(--color-zinc-800);
+  }
   .bg-zinc-900 {
     background-color: var(--color-zinc-900);
+  }
+  .bg-gradient-to-b {
+    --tw-gradient-position: to bottom in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
   }
   .bg-gradient-to-r {
     --tw-gradient-position: to right in oklab;
@@ -493,8 +515,26 @@
     --tw-gradient-from: var(--color-rose-500);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .from-sky-900 {
+    --tw-gradient-from: var(--color-sky-900);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .via-cyan-500 {
+    --tw-gradient-via: var(--color-cyan-500);
+    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .via-pink-500 {
+    --tw-gradient-via: var(--color-pink-500);
+    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
   .to-pink-500 {
     --tw-gradient-to: var(--color-pink-500);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-teal-900 {
+    --tw-gradient-to: var(--color-teal-900);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .bg-cover {
@@ -515,6 +555,9 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
@@ -523,6 +566,9 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
   }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
